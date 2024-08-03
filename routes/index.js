@@ -1,4 +1,6 @@
-import express from 'express'
+import express from 'express';
+import users from './users.js'
+import addresses from './addresses.js'
 
 let router = express.Router();
 
@@ -6,5 +8,8 @@ let router = express.Router();
 router.get('/', (req, res, next) => {
   res.render('index', { title: 'Express' });
 });
+
+router.use('/users', users)
+router.use('/addresses', addresses)
 
 export default router;
