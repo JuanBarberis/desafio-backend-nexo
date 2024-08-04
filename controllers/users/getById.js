@@ -5,7 +5,6 @@ const getUserById = async (req, res) => {
 
     const dni  = req.params.id
 
-    console.log(`Buscando usuario con DNI: ${dni}`)
     try {
         const user = await User.findOne({ dni: dni });
 

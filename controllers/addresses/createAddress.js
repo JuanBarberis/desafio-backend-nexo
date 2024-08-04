@@ -4,7 +4,6 @@ import { Address } from "../../models/Address.js";
 const createAddress = async (req, res) => {
 
     const dni = req.params.userId
-    console.log(req.params)
     const { street, number, city } = req.body
     try {
 

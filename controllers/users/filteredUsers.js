@@ -8,7 +8,6 @@ const filteredUser = async (req, res) => {
         if (nombre) filter.nombre = nombre.toLowerCase();
         if (apellido) filter.apellido = apellido.toLowerCase();
 
-        console.log(filter)
         const users = await User.find(filter);
         if (users.length === 0) {
             return res.status(404).json({

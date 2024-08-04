@@ -4,7 +4,6 @@ import { Address } from "../../models/Address.js";
 const deleteAddress = async (req, res) => {
 
     const { userId, id } = req.params
-    console.log(req.params)
     try {
 
         const user = await User.findOne({ dni: userId })
